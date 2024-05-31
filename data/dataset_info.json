@@ -248,36 +248,6 @@
   "ruozhiba_gpt4": {
     "hf_hub_url": "hfl/ruozhiba_gpt4_turbo"
   },
-  "llava_1k_en": {
-    "hf_hub_url": "BUAADreamer/llava-en-zh-2k",
-    "subset": "en",
-    "formatting": "sharegpt",
-    "columns": {
-      "messages": "messages",
-      "images": "images"
-    },
-    "tags": {
-      "role_tag": "role",
-      "content_tag": "content",
-      "user_tag": "user",
-      "assistant_tag": "assistant"
-    }
-  },
-  "llava_1k_zh": {
-    "hf_hub_url": "BUAADreamer/llava-en-zh-2k",
-    "subset": "zh",
-    "formatting": "sharegpt",
-    "columns": {
-      "messages": "messages",
-      "images": "images"
-    },
-    "tags": {
-      "role_tag": "role",
-      "content_tag": "content",
-      "user_tag": "user",
-      "assistant_tag": "assistant"
-    }
-  },
   "llava_150k_en": {
     "hf_hub_url": "BUAADreamer/llava-en-zh-300k",
     "subset": "en",
@@ -296,20 +266,6 @@
   "llava_150k_zh": {
     "hf_hub_url": "BUAADreamer/llava-en-zh-300k",
     "subset": "zh",
-    "formatting": "sharegpt",
-    "columns": {
-      "messages": "messages",
-      "images": "images"
-    },
-    "tags": {
-      "role_tag": "role",
-      "content_tag": "content",
-      "user_tag": "user",
-      "assistant_tag": "assistant"
-    }
-  },
-  "mllm_pt_demo": {
-    "hf_hub_url": "BUAADreamer/mllm_pt_demo",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
@@ -515,5 +471,43 @@
       "prompt": "content"
     },
     "folder": "python"
+  },
+  "SFT_Dataset": {
+    "file_name": "SFT_Dataset.jsonl",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "DPO_Dataset": {
+    "file_name": "DPO_Dataset.jsonl",
+    "ranking": true,
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "chosen": "chosen",
+      "rejected": "rejected"
+    }
+  },
+  "DPO_Dataset_small": {
+    "file_name": "DPO_Dataset_small.jsonl",
+    "ranking": true,
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "chosen": "chosen",
+      "rejected": "rejected"
+    }
+  },
+  "DPO_Dataset_tiny": {
+    "file_name": "DPO_Dataset_tiny.jsonl",
+    "ranking": true,
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "chosen": "chosen",
+      "rejected": "rejected"
+    }
   }
 }
